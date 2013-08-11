@@ -16,6 +16,10 @@ public class AES extends AbstractCrypto {
 	private IvParameterSpec	iv;
 	private SecretKeySpec	spec;
 	
+	public AES(String key) {
+		super(key);
+	}
+	
 	@Override
 	protected void init() {
 		try {

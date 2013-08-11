@@ -10,10 +10,6 @@ public abstract class AbstractCrypto implements Encrypt, Decrypt {
 	
 	protected String	key;
 	
-	public AbstractCrypto() {
-		this.init();
-	}
-	
 	public AbstractCrypto(String key) {
 		this.init();
 		this.updateKey(key);

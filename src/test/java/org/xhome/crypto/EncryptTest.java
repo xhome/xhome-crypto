@@ -32,18 +32,16 @@ public class EncryptTest {
 	
 	@Test
 	public void testDES() {
-		AbstractCrypto e = new DES();
 		String key = "abc";
-		e.updateKey(key);
+		AbstractCrypto e = new DES(key);
 		String encrypt = e.encrypt("adasdf");
 		System.out.println(e.decrypt(encrypt) + "\t" + encrypt);
 	}
 	
 	@Test
 	public void testAES() {
-		AbstractCrypto e = new AES();
 		String key = "0123456789123456";
-		e.updateKey(key);
+		AbstractCrypto e = new AES(key);
 		String encrypt = e.encrypt("adasdf");
 		System.out.println(e.decrypt(encrypt) + "\t" + encrypt);
 	}

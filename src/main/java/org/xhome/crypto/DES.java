@@ -16,6 +16,10 @@ public final class DES extends AbstractCrypto {
 	private Key		k;
 	private Cipher	cipher;
 	
+	public DES(String key) {
+		super(key);
+	}
+	
 	@Override
 	protected void init() {
 		try {
